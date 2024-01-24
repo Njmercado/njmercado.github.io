@@ -1,21 +1,7 @@
 import react from 'react';
-import Container from './Container';
+import { ContainerDTO, Container } from './';
 
-interface INoteContainer {
-  width?: number;
-  height?: number;
-  children?: any;
-  className?: string;
-}
-
-class NoteContainerDTO implements INoteContainer {
-  width?: number = 16;
-  height?: number = 16;
-  children?: any | undefined;
-  className?: string | undefined;
-}
-
-export default function NoteContainer(props: NoteContainerDTO) {
+export default function NoteContainer(props: ContainerDTO) {
   return (
     <div className="relative">
       <Container
