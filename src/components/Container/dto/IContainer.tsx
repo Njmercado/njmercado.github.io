@@ -3,4 +3,5 @@ export interface IContainer {
   height?: number;
   children?: any;
   className?: string;
+  margin?: number;
 }

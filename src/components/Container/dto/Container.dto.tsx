@@ -5,4 +5,5 @@ export default class ContainerDTO implements IContainer {
   height?: number = 16;
   children?: any | undefined;
   className?: string | undefined;
+  margin?: number = 10;
 }
