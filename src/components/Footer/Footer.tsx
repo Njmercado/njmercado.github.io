@@ -3,6 +3,6 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <div>footer</div>
+    <div className="bg-gray-500 h-20">footer</div>
   )
 }

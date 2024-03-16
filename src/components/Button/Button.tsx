@@ -4,10 +4,14 @@ import Container from '../Container/Container';
 export default function Button(props: any) {
   return (
     <Container className={
-        props.className + 
-        ' hover:bg-black hover:text-white w-full h-full'
+        ` 
+          transition-colors
+          hover:bg-black hover:text-white min-w-fit min-h-fit max-w-full max-h-full p-2
+          cursor-pointer
+        `
+        + props.className 
     }>
-      <button className="w-full h-full">{props.children}</button>
+      {props.children}
     </Container>
   );
 }

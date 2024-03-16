@@ -1,7 +1,7 @@
 import react from 'react';
-import { ContainerDTO, Container } from './';
+import { InfoContainerDTO, Container } from './';
 
-export default function NoteContainer(props: ContainerDTO) {
+export default function InfoContainer(props: InfoContainerDTO) {
   return (
       <div
         style={{
@@ -14,14 +14,16 @@ export default function NoteContainer(props: ContainerDTO) {
         <Container
           className={props.className + ` absolute bg-white z-20 min-w-fit min-h-fit w-full h-full`}
         >
-          {props.children}
+          <div>{props.header}</div>
+          <div className='h-fit'>{props.body}</div>
+          <div className='absolute bottom-0 w-full'>{props.footer}</div>
         </Container>
         <Container
           style={{
             top: '10px', 
             left: '10px', 
           }}
-          className={`absolute z-10 bg-gray-100 w-full h-full`}
+          className={`absolute z-10 bg-gray-300 w-full h-full`}
         ></Container>
       </div>
   )
