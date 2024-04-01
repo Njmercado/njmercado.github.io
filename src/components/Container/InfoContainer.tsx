@@ -1,15 +1,14 @@
-import react from 'react';
 import { InfoContainerDTO, Container } from './';
 
 export default function InfoContainer(props: InfoContainerDTO) {
   return (
       <div
         style={{
-          width: `${props.width}px`,
-          height: `${props.height}px`,
           margin: `${props.margin ?? 10}px`,
+          ...(props.width && { width: `${props.width}` }),
+          ...(props.height && { height: `${props.height}` }),
         }}
-        className="relative"
+        className={ "relative h-full w-full " + props.className }
       >
         <Container
           className={props.className + ` absolute bg-white z-20 min-w-fit min-h-fit w-full h-full`}
@@ -23,7 +22,7 @@ export default function InfoContainer(props: InfoContainerDTO) {
             top: '10px', 
             left: '10px', 
           }}
-          className={`absolute z-10 bg-gray-300 w-full h-full`}
+          className={`absolute z-10 bg-gray-500 w-full h-full pointer-events-none`}
         ></Container>
       </div>
   )

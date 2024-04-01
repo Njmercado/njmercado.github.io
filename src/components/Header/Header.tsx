@@ -10,12 +10,6 @@ export default function Header() {
         <button>A</button>
         <button>big A</button>
       </div>
-      {/* <Container className="flex justify-center w-5/6 h-10">
-        <Button className="w-1/4 m-0">home</Button>
-        <Button className="w-1/4 m-0">about</Button>
-        <Button className="w-1/4 m-0">projects</Button>
-        <Button className="w-1/4 m-0">menu</Button>
-      </Container> */}
     </div>
   )
 }

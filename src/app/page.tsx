@@ -7,69 +7,65 @@ import {
 } from '@/components/Container'
 import Button from '@/components/Button/Button'
 import { useState, useEffect } from 'react';
-import { DESCRIPTIONS } from '@/contants/page';
+import { DESCRIPTIONS, ITEMS } from '@/contants/page';
 
 export default function Home() {
-  const [counter, setCounter] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setCounter((counter) => (counter + 1) % (DESCRIPTIONS.length))
-    }, 3000)
-  }, [counter])
-
-  return (
-    <main className="w-full h-screen">
-      <div className="relative flex flex-row w-full h-2/5">
-        <div className='w-1/2 flex flex-col justify-center items-start p-4' id="description">
-          <span className="font-extrabold text-5xl">Hi, i'm Nino</span>
-          <div>
-            <span className='text-xl'>I'm a...{DESCRIPTIONS[counter]} </span>
+  const getProjects = () => {
+    let projects: any[] = []
+    for (var i = 0; i < 7; i++) {
+      projects.push(
+        // TODO: move this to a function
+        <div className="grid grid-cols-6  w-full h-fit my-2">
+          <div className="col-span-2 flex justify-center items-center">
+            <img className='rounded-full border-black border-2' style={{height: '50px', width: '50px'}} src={ITEMS[0]} alt="" />
+          </div>
+          <div className="col-span-4 flex flex-col w-full">
+            <div className="p-2">Project Name</div>
+            <div className="grid grid-cols-2">
+              <div className="bg-gray-400 text-white col-span-1 mx-2 text-center" style={{borderRadius: '10px'}}>tech</div>
+              <div className="bg-gray-400 text-white col-span-1 mx-2 rounded-xl text-center">tech 2</div>
+            </div>
           </div>
         </div>
-        <div className='w-1/2 flex justify-center items-center' id="img">img</div>
-        <div className="absolute flex w-1/2 h-fit bg-gray-500 -bottom-6 left-1/4">
-          <Button className="w-1/3 m-0 flex flex-row justify-between">
+      )
+    }
+
+    return projects;
+  }
+
+  return (
+    <div className="h-screen grid grid-rows-10">
+      <div className="grid grid-cols-10 row-span-9 h-full">
+        {/* This part gonna be used to display de main pages */}
+        <div className="bg-gray-500 flex flex-col col-span-2">
+          <div className='h-1/2'>
+            <div>Home</div>
             <div>Projects</div>
-            <div>{"->"}</div>
-          </Button>
-          <Button className="w-1/3 m-0 flex flex-row justify-between">
-            <div>About</div>
-            <div>{"->"}</div>
-          </Button>
-          <Button className="w-1/3 m-0 flex flex-row justify-between">
+            <div>About me</div>
+            <div>Blog</div>
             <div>Contact</div>
-            <div>{"->"}</div>
-          </Button>
+          </div>
+          <div className="w-full h-1/2 relative">
+            <div className='absolute max-h-full w-full overflow-scroll scroll-smooth overflow-x-hidden' style={{scrollbarWidth: 'none'}}>
+              {
+                getProjects().map(project => project)
+              }
+            </div>
+          </div>
+        </div>
+        <div className="col-span-8 h-full bg-gray-100">
+
         </div>
       </div>
-      <div className="bg-gray-400 w-full min-h-3/5 h-3/5 max-h-fit p-5">
+      {/* this part gonna control the pages */}
+      <div className="bg-gray-300 row-span-1">
         <div className="flex flex-row justify-center items-center h-full">
-          <InfoContainer
-            width={200}
-            height={200}
-            header={
-              <div className="h-1/3">
-                <div className='bg-gray-700 flex flex-row justify-center'>
-                  <div id="buttons" className='flex flex-row justify-start w-1/3'>
-                    <button>x</button>
-                    <button>{"<>"}</button>
-                  </div>
-                  <div className="text-left w-2/3">title long title</div>
-                </div>
-                <div>img</div>
-              </div>
-            }
-            body= {
-              <div className="h-2/3">body</div>
-            }
-            footer={
-              <div>footer</div>
-            }
-          >
-          </InfoContainer>
+          <div className='mx-2'>{"|<"}</div>
+          <div className='mx-2'>{"||"}</div>
+          <div className='mx-2'>{">|"}</div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }
