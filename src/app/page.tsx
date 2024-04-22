@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation';
+import { URL } from '../constants/urls';
 
 export default function Home() {
   const router = useRouter();
@@ -13,7 +14,7 @@ export default function Home() {
           Hi, Nino here. In simple words I am an Artist by hobbie and Designer by heart and a Developer by passion.
           I like simple and functional things without the necessity of weird solutions. My sign is
           "perfection do not exists but there is always a better solution".
-          <button className='m-0'>
+          <button onClick={() => router.push(URL.ABOUT.MAIN)} className='m-0'>
             <span className='bg-gray-500 text-white ml-2 rounded-sm p-0.5'>Lets go and know more about me {":)"}</span>
           </button>
         </p>
@@ -23,7 +24,7 @@ export default function Home() {
         <h2 className='text-2xl font-bold'>Projects</h2>
         <p>
           Information about projects
-          <button onClick={() => router.push('/project')} className='m-0'>
+          <button onClick={() => router.push(URL.PROJECT.MAIN)} className='m-0'>
             <span className='bg-gray-500 text-white ml-2 rounded-sm p-0.5'>Come and see some of my projects{":)"}</span>
           </button>
         </p>

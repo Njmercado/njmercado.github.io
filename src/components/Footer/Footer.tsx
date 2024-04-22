@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer(props: any) {
   return (
-    <div className={"bg-gray-300 grid grid-cols-10 " + props.className }>
+    <footer className={"bg-gray-300 grid grid-cols-10 " + props.className }>
       <div className="col-span-2 flex flex-row items-center">menu</div>
       <div className="col-span-6">
         <div className="flex flex-row justify-center items-center h-full">
@@ -13,6 +13,6 @@ export default function Footer(props: any) {
         </div>
       </div>
       <div className="col-span-2 flex flex-row items-center">custom items</div>
-    </div>
+    </footer>
   )
 }
