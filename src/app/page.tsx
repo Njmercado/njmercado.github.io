@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { URL } from '../constants/urls';
+import Button, {Action} from '@/components/Button/Button';
 
 export default function Home() {
   const router = useRouter();
@@ -14,9 +15,7 @@ export default function Home() {
           Hi, Nino here. In simple words I am an Artist by hobbie and Designer by heart and a Developer by passion.
           I like simple and functional things without the necessity of weird solutions. My sign is
           "perfection do not exists but there is always a better solution".
-          <button onClick={() => router.push(URL.ABOUT.MAIN)} className='m-0'>
-            <span className='bg-gray-500 text-white ml-2 rounded-sm p-0.5'>Lets go and know more about me {":)"}</span>
-          </button>
+          <Button type={Action.LINK} url={URL.ABOUT.MAIN} text="Lets go and know more about me :)"></Button>
         </p>
       </section>
       <hr className="border-solid border-t-2 border-t-black my-8" />
@@ -24,9 +23,7 @@ export default function Home() {
         <h2 className='text-2xl font-bold'>Projects</h2>
         <p>
           Information about projects
-          <button onClick={() => router.push(URL.PROJECT.MAIN)} className='m-0'>
-            <span className='bg-gray-500 text-white ml-2 rounded-sm p-0.5'>Come and see some of my projects{":)"}</span>
-          </button>
+          <Button type={Action.LINK} url={URL.PROJECT.MAIN} text="Come and see some of my projects :)"></Button>
         </p>
       </section>
       <hr className="boder-solid border-t-2 border-t-black my-8" />
