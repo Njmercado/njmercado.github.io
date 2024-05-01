@@ -1,4 +1,3 @@
-import react from 'react';
 import { useRouter } from 'next/navigation';
 
 export enum Action {

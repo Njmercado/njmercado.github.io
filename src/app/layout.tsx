@@ -28,10 +28,13 @@ export default function RootLayout({
               id="informationContainer"
               className="
                 col-span-8 bg-gray-100 flex flex-col justify-center items-center
-                h-full xs:*:w-11/12 sm:*:w-11/12 md:*:w-10/12 lg:*:w-9/12 xl:*:w-8/12
+                xs:*:w-11/12 sm:*:w-11/12 md:*:w-10/12 lg:*:w-9/12 xl:*:w-8/12
+                overflow-auto
               "
             >
-              {children}
+              <div className="overflow-auto h-auto">
+                {children}
+              </div>
             </main>
           </div>
           <Footer className="row-span-1"></Footer>

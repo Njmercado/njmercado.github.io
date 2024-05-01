@@ -1,14 +1,11 @@
 'use client'
 
-import { useRouter } from 'next/navigation';
 import { URL } from '../constants/urls';
 import Button, {Action} from '@/components/Button/Button';
 
 export default function Home() {
-  const router = useRouter();
-
   return (
-    <div>
+    <main>
       <section>
         <h2 className='text-2xl font-bold'>Home</h2>
         <p>
@@ -31,6 +28,6 @@ export default function Home() {
         <h2 className="text-2xl font-bold">Contact</h2>
         <p>Contact information</p>
       </section>
-    </div>
+    </main>
   )
 }
