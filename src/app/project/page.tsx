@@ -1,7 +1,7 @@
 'use client';
 
 import ProjectList from '@/components/ProjectList/ProjectList';
-import { ProjectsData } from '@/constants/projects';
+import { ProjectsData } from '@/constants/projects.constant';
 
 export default function Project() {
   return (

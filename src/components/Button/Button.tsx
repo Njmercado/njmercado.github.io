@@ -1,3 +1,4 @@
+import { IGeneral } from '@/interfaces/general.interface';
 import { useRouter } from 'next/navigation';
 
 export enum Action {
@@ -5,18 +6,19 @@ export enum Action {
   FUNC = 'function',
 }
 
-export interface IButton {
+export interface IButton extends IGeneral {
   url?: string;
   onClick?: Function;
-  type: Action;
-  text?: string;
+  type?: Action;
+  external?: boolean;
 }
 
-export class ButtonDTO implements IButton{
+export class ButtonDTO implements IButton {
   url?: string = "";
   onClick?: Function;
-  type: Action = Action.FUNC;
-  text?: string = "";
+  type?: Action = Action.FUNC;
+  value: string = "";
+  className?: string | undefined;
 }
 
 export default function Button(props: ButtonDTO) {
@@ -27,13 +29,14 @@ export default function Button(props: ButtonDTO) {
       case Action.LINK:
         router.push(props.url as string)
       case Action.FUNC:
+      default:
         props.onClick?.call(null)
     }
   }
 
   return (
-    <button onClick={action} className='m-0'>
-      <span className='bg-gray-500 text-white ml-2 rounded-sm p-0.5'>{props.text}</span>
+    <button onClick={action} className={'m-0 bg-gray-500 text-white ml-2 rounded-sm p-0.5 ' + (props.className ?? '')}>
+      {props.value}
     </button>
   );
 }

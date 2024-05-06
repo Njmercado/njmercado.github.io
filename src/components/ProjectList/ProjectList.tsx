@@ -1,18 +1,18 @@
 import React from "react";
-import { IProjectTemplate, ProjectData } from "../Project/interface/project";
-import ProjectItem from "../Project/Project";
+import { IProjectTemplate } from "../Project/interface/ProjectTemplate.interface";
+import ProjectItem from "../Project/ProjectItem";
+import { useRouter } from "next/navigation";
+import { ProjectArray } from '../Project/type/ProjectArray.type'
 
-export default function ProjectList({ projects }: ProjectData) {
+export default function ProjectList({ projects }: ProjectArray) {
+  const router = useRouter()
   return (
     projects.map((project: IProjectTemplate, index: any) => {
       return (
-        <article key={index} className="my-4 flex flex-row justify-center items-center">
+        <article onClick={() => router.push(`project/${project.title}`)} key={index} className="my-4 flex flex-row justify-center items-center">
           <span>{index+1}</span>
           <ProjectItem
-            image={{
-              src: project.image.src,
-              alt: project.image.alt,
-            }}
+            image={project.images[0]}
             title={project.short.title}
             description={project.short.description}
             techs={project.short.techs}

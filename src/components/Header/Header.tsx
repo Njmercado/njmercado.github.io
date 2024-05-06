@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { URL } from '../../constants/urls';
+import { URL } from '../../constants/urls.constant';
 
 export default function Header(props: any) {
   const router = useRouter()

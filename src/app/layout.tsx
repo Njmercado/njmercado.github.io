@@ -32,7 +32,7 @@ export default function RootLayout({
                 overflow-auto
               "
             >
-              <div className="overflow-auto h-auto">
+              <div className="overflow-auto h-auto py-10">
                 {children}
               </div>
             </main>

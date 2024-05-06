@@ -14,4 +14,7 @@ export const URL = {
   ABOUT: {
     MAIN: '/about'
   },
+  NOT_FOUND: {
+    MAIN: '/404'
+  }
 }

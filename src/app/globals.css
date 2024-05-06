@@ -16,6 +16,11 @@
   }
 }
 
+strong {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
 /* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

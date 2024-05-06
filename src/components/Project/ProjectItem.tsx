@@ -1,13 +1,13 @@
-import { IProject } from "./interface/project";
+import { IShortProject } from "./interface/Project.interface";
 
 export default function ProjectItem({
   image,
   title,
   description,
   techs,
-}: IProject) {
+}: IShortProject) {
   return (
-    <article className="grid grid-cols-10 h-16 w-full">
+    <article className="grid grid-cols-10 w-full hover:bg-gray-200 cursor-pointer transition-colors py-1">
       <div className="flex justify-center items-center col-start-1 col-span-2">
         <img
           src={image.src}
