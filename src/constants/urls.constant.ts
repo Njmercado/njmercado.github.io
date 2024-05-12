@@ -1,20 +1,24 @@
 export const URL = {
-  HOME: {
+  "HOME": {
     MAIN: '/'
   },
-  PROJECT: {
-    MAIN: '/project'
+  "PROJECTS": {
+    MAIN: '/projects'
   },
-  BLOG: {
+  "BLOG": {
     MAIN: '/blog'
   },
-  CONTACT: {
+  "CONTACT": {
     MAIN: '/contact'
   },
-  ABOUT: {
+  "ABOUT": {
     MAIN: '/about'
   },
-  NOT_FOUND: {
+  "NOT_FOUND": {
     MAIN: '/404'
+  }
+} as {
+  [key: string]: {
+    [key: string]: string
   }
 }

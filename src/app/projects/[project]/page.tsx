@@ -1,12 +1,12 @@
 'use client';
 
 import { useParams, useRouter } from "next/navigation"
-import { EMPTY_PROJECT_TEMPLATE, ProjectsData } from "@/constants/projects.constant";
+import { EMPTY_PROJECT_TEMPLATE, PROJECTS} from "@/constants/projects.constant";
 import { Title, TitleSize } from "@/components/Title/Title";
 import React, { useEffect, useState } from "react";
 import { URL } from "@/constants/urls.constant";
 import { IProjectTemplate } from "@/components/Project/interface/ProjectTemplate.interface";
-import Button, { Action } from "@/components/Button/Button";
+import Button from "@/components/Button/Button";
 
 export default function ProjectView() {
 
@@ -16,7 +16,7 @@ export default function ProjectView() {
 
   useEffect(() => {
     const projectName = params.project.toUpperCase()
-    const gottenProject = ProjectsData.filter(project =>
+    const gottenProject = PROJECTS.filter(project =>
       project.title.toUpperCase() === projectName
     )[0]
     const isProjectEmpty = () => gottenProject === undefined

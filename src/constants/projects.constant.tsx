@@ -2,7 +2,7 @@ import { IProjectTemplate } from "@/components/Project/interface/ProjectTemplate
 import { faDigitalOcean, faDocker, faEnvira, faGithub, faNodeJs, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const ProjectsData = [
+export const PROJECTS = [
   {
     title: 'Kribi',
     description: () => (
@@ -29,7 +29,12 @@ export const ProjectsData = [
       title: 'Kribi',
       description: 'Dictionary of Colombian Palenque indigenous language',
       techs: [
-        <FontAwesomeIcon icon={faReact} size="lg" />
+        <em><strong>Vue</strong></em>,
+        <em><strong>Vuetify</strong></em>,
+        <em><strong>Nodejs</strong></em>,
+        <em><strong>Digital Ocean</strong></em>,
+        <em><strong>Github</strong></em>,
+        <em><strong>Docker</strong></em>,
       ],
     },
     history: [],

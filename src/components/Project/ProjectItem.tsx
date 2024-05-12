@@ -19,11 +19,11 @@ export default function ProjectItem({
       <article className="col-start-3 col-span-8">
         <h4 className="text-lg"><span><strong>{title}</strong></span></h4>
         <p className="text-sm">{description}</p>
-        <p className="grid grid-cols-3">
+        <p className="grid grid-cols-4 gap-1">
           {
             techs.map((tech, index) => {
               return (
-                <span key={index} className="text-sm inline"><strong>{tech}</strong></span>
+                <span key={index} className="text-sm inline">{tech}</span>
               )
             })
           }
