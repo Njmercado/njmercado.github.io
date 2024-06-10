@@ -1,22 +1,28 @@
 'use client'
 
 import Button from "@/components/Button/Button";
-import { Title, TitleSize } from "@/components/Title/Title";
+import { TECHS_I_KNOW, CV_PDF } from "@/constants/general.constant";
 import { URL } from "@/constants/urls.constant";
-import { faAngular, faDigitalOcean, faGithub, faNodeJs, faPython, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
 import { faHand } from "@fortawesome/free-regular-svg-icons";
-import { faTools } from "@fortawesome/free-solid-svg-icons/faTools";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/navigation";
 
 export default function AboutMe() {
 
   const router = useRouter();
-  const TECHS_I_KNOW = [faReact, faVuejs, faAngular, faNodeJs, faPython, faGithub, faDigitalOcean]
 
   const openKribiProject = () => {
     router.push(URL.PROJECTS.MAIN + '/Kribi')
   }
+
+  const onDownloadCV = () => {
+    const link = document.createElement("a");
+    link.target = "_blank";
+    link.href = CV_PDF;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <main>
@@ -30,12 +36,12 @@ export default function AboutMe() {
       <section className="mt-10">
         <article>
           <p>
-            First of all...these are the <strong>Techs I have worked on</strong> 
+            First of all...these are the <strong>Techs I have worked on</strong>
           </p>
           <p className="mt-5 grid grid-cols-4 gap-5">
             {
-              TECHS_I_KNOW.map(tech =>
-                <FontAwesomeIcon icon={tech} size="4x"></FontAwesomeIcon>
+              TECHS_I_KNOW.map((tech: any, index: number) =>
+                <FontAwesomeIcon icon={tech} size="4x" key={index}></FontAwesomeIcon>
               )
             }
           </p>
@@ -69,9 +75,9 @@ export default function AboutMe() {
       </section>
       <section className="mt-20">
         <article>
-          <p className="grid grid-cols-2">
-            <Button className="h-20" value="Download CV"></Button>
-            <Button className="h-20" value="See Projects"></Button>
+          <p className="grid grid-cols-2 gap-3">
+            <Button onClick={onDownloadCV} className="h-20 w-full" value="Download CV" />
+            <Button className="h-20" value="See Projects" />
           </p>
         </article>
       </section>
