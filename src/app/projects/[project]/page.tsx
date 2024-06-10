@@ -79,7 +79,7 @@ export default function ProjectView() {
         <Button
           onClick={() => window.open(project.link, '_blank')}
           value="Visit"
-          className="w-9/12 h-20 hover:bg-gray-700 transition-colors rounded-md"
+          className="w-9/12 h-20"
         ></Button>
       </section>
     </main>

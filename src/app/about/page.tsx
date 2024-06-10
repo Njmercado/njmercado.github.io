@@ -15,7 +15,7 @@ export default function AboutMe() {
   const TECHS_I_KNOW = [faReact, faVuejs, faAngular, faNodeJs, faPython, faGithub, faDigitalOcean]
 
   const openKribiProject = () => {
-    router.push(URL.PROJECTS.MAIN+'/Kribi')
+    router.push(URL.PROJECTS.MAIN + '/Kribi')
   }
 
   return (
@@ -25,8 +25,26 @@ export default function AboutMe() {
           <p>
             Hi again visitor <span><FontAwesomeIcon icon={faHand} size='lg'></FontAwesomeIcon></span>
           </p>
+        </article>
+      </section>
+      <section className="mt-10">
+        <article>
+          <p>
+            First of all...these are the <strong>Techs I have worked on</strong> 
+          </p>
+          <p className="mt-5 grid grid-cols-4 gap-5">
+            {
+              TECHS_I_KNOW.map(tech =>
+                <FontAwesomeIcon icon={tech} size="4x"></FontAwesomeIcon>
+              )
+            }
+          </p>
+        </article>
+      </section>
+      <section className="mt-10">
+        <article>
           <p className="mt-5">
-            <strong className="ml-0">Computer Engineer</strong> with focus on Computer Sciences. <strong><em>3+ years</em></strong> of experience
+            Secondly...<strong className="ml-0">Computer Engineer</strong> with focus on Computer Sciences. <strong><em>3+ years</em></strong> of experience
             working with multiple technologies as in <strong><em>Frontend</em></strong> as in <strong><em>Backend</em></strong>. Moving
             to <strong>Data Analysis</strong> and <strong>ML</strong>.
           </p>
@@ -49,17 +67,11 @@ export default function AboutMe() {
           </p>
         </article>
       </section>
-      <section className="mt-10">
+      <section className="mt-20">
         <article>
-          <Title size={TitleSize.BIG} value={
-            <span>Techs I have worked <FontAwesomeIcon icon={faTools}></FontAwesomeIcon></span>
-          }></Title>
-          <p className="mt-5 grid grid-cols-4 gap-5">
-            {
-              TECHS_I_KNOW.map(tech =>
-                <FontAwesomeIcon icon={tech} size="4x"></FontAwesomeIcon>
-              )
-            }
+          <p className="grid grid-cols-2">
+            <Button className="h-20" value="Download CV"></Button>
+            <Button className="h-20" value="See Projects"></Button>
           </p>
         </article>
       </section>
