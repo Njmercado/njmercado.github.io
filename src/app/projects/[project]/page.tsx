@@ -1,12 +1,15 @@
 'use client';
 
 import { useParams, useRouter } from "next/navigation"
-import { EMPTY_PROJECT_TEMPLATE, PROJECTS} from "@/constants/projects.constant";
+import { EMPTY_PROJECT_TEMPLATE, PROJECTS } from "@/constants/projects.constant";
 import { Title, TitleSize } from "@/components/Title/Title";
 import React, { useEffect, useState } from "react";
 import { URL } from "@/constants/urls.constant";
 import { IProjectTemplate } from "@/components/Project/interface/ProjectTemplate.interface";
-import Button from "@/components/Button/Button";
+import Button, { Action } from "@/components/Button/Button";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function ProjectView() {
 
@@ -31,6 +34,20 @@ export default function ProjectView() {
   return (
     <main>
       <section>
+        <article className="-ml-2">
+          <Button
+            url={'/projects'}
+            type={Action.LINK}
+            value={
+              <article className="flex gap-2 items-center px-1">
+                <FontAwesomeIcon icon={faArrowLeft}/>
+                <span>Projects</span>
+              </article>
+            }
+          />
+        </article>
+      </section>
+      <section className="mt-20">
         <article>
           <Title size={TitleSize.EXTRA_LARGE} value={params.project.toUpperCase()}></Title>
           <p className="mt-10">
@@ -43,9 +60,17 @@ export default function ProjectView() {
       <section className="mt-10">
         <article>
           <Title size={TitleSize.BIG} value="Views"></Title>
-          {
-            project?.images.length > 0 ? "map images" : "Poner template de imagenes cargando..."
-          }
+          <p className="flex flex-wrap gap-4 justify-center mt-10">
+            {project?.images.map(({ src, alt }) =>
+              <Image
+                className="shadow-md shadow-slate-400 rounded-md" 
+                src={src}
+                alt={alt}
+                width={300}
+                height={300}
+              />
+            )}
+          </p>
         </article>
       </section>
       <section className="mt-10">
@@ -53,10 +78,10 @@ export default function ProjectView() {
           <Title size={TitleSize.BIG} value="Used techs"></Title>
           {
             project.techs.length > 0 ?
-              <p className="grid grid-cols-4 text-center mt-10">
-                { 
+              <p className="flex flex-wrap gap-10 justify-around mt-10">
+                {
                   project?.techs.map(
-                    (tech: React.JSX.Element, index: any) => 
+                    (tech: React.JSX.Element, index: any) =>
                       <span key={index}>{tech}</span>
                   )
                 }

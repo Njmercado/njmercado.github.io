@@ -20,10 +20,24 @@ export const PROJECTS = [
       <FontAwesomeIcon icon={faGithub} size="4x" />,
       <FontAwesomeIcon icon={faDocker} size="4x" />,
     ],
-    images: [{
-      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CUsI3VDX0CC0A-ugu6lrLRTVh1uXc4ymn-pIV2bHMg&s',
-      alt: ''
-    }],
+    images: [
+      {
+        src: '/static/kribi/1.png',
+        alt: ''
+      },
+      {
+        src: '/static/kribi/2.png',
+        alt: ''
+      },
+      {
+        src: '/static/kribi/3.png',
+        alt: ''
+      },
+      {
+        src: '/static/kribi/4.png',
+        alt: ''
+      }
+    ],
     link: "http://www.kribi.com.co",
     short: {
       title: 'Kribi',
