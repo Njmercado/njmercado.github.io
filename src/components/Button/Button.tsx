@@ -1,5 +1,6 @@
 import { IGeneral } from '@/interfaces/general.interface';
 import { useRouter } from 'next/navigation';
+import { ReactNode } from 'react';
 
 export enum Action {
   LINK = 'link',
@@ -17,8 +18,8 @@ export class ButtonDTO implements IButton {
   url?: string = "";
   onClick?: Function;
   type?: Action = Action.FUNC;
-  value: string = "";
   className?: string | undefined;
+  value: ReactNode = ""; 
 }
 
 export default function Button(props: ButtonDTO) {
