@@ -1,6 +1,6 @@
 'use client'
 
-import Button from "@/components/Button/Button";
+import Button, { Action } from "@/components/Button/Button";
 import { TECHS_I_KNOW, CV_PDF } from "@/constants/general.constant";
 import { URL } from "@/constants/urls.constant";
 import { faHand } from "@fortawesome/free-regular-svg-icons";
@@ -77,7 +77,12 @@ export default function AboutMe() {
         <article>
           <p className="grid grid-cols-2 gap-3">
             <Button onClick={onDownloadCV} className="h-20 w-full" value="Download CV" />
-            <Button className="h-20" value="See Projects" />
+            <Button
+              url='/projects'
+              type={Action.LINK}
+              className="h-20" 
+              value="See Projects"
+            />
           </p>
         </article>
       </section>
