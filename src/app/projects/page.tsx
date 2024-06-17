@@ -16,15 +16,16 @@ export default function Project() {
           </p>
         }></Title>
         <p className="mt-10">
-          A lo largo de mi vida profesional he desarrollado, y participado, en multiples proyectos.
-          Los proyectos que he tocado han sido desde manejo con <strong>Wordpress</strong> hasta
-          complejos entramados en <strong>React</strong>, <strong>Angular</strong>, <strong>Vue</strong>, <strong>Visual Basic</strong>,
-          entre mucho otros.
+          Thought my professional life I have participated, developed and helped on multiples projects which includes since <strong>WordPress</strong>
+          till really complex structures in <strong>React</strong>, <strong>Angular</strong>, <strong>Vue</strong>, <strong>Fast</strong>, <strong>NestJs</strong>...etc
+        </p>
+        <p className="mt-5">
+          These ones are just a few of all developments I have been part.
         </p>
       </section>
 
       <article className="w-full mt-10">
-        <Title size={TitleSize.NORMAL} value='Populares:'></Title>
+        <Title size={TitleSize.NORMAL} value='Top Projects:'></Title>
         <ProjectList projects={PROJECTS}></ProjectList>
       </article>
     </div>

@@ -40,7 +40,7 @@ export default function ProjectView() {
             type={Action.LINK}
             value={
               <article className="flex gap-2 items-center px-1">
-                <FontAwesomeIcon icon={faArrowLeft}/>
+                <FontAwesomeIcon icon={faArrowLeft} />
                 <span>Projects</span>
               </article>
             }
@@ -60,17 +60,18 @@ export default function ProjectView() {
       <section className="mt-10">
         <article>
           <Title size={TitleSize.BIG} value="Views"></Title>
-          <p className="flex flex-wrap gap-4 justify-center mt-10">
-            {project?.images.map(({ src, alt }) =>
+          <div className="flex flex-wrap gap-4 justify-center mt-10">
+            {project?.images.map(({ src, alt }, index: number) =>
               <Image
-                className="shadow-md shadow-slate-400 rounded-md" 
+                className="shadow-md shadow-slate-400 rounded-md"
                 src={src}
                 alt={alt}
-                width={300}
-                height={300}
+                width={400}
+                height={400}
+                key={index}
               />
             )}
-          </p>
+          </div>
         </article>
       </section>
       <section className="mt-10">
@@ -90,16 +91,19 @@ export default function ProjectView() {
           }
         </article>
       </section>
-      <section className="mt-10">
-        <article>
-          <Title size={TitleSize.BIG} value="Technical explanation"></Title>
-          <p className="mt-10">
-            {
-              project.technicalDescription() ?? "There is no technical description available :("
-            }
-          </p>
-        </article>
-      </section>
+      {
+        project.technicalDescription?.() &&
+        <section className="mt-10">
+          <article>
+            <Title size={TitleSize.BIG} value="Technical explanation"></Title>
+            <p className="mt-10">
+              {
+                project.technicalDescription?.() ?? "There is no technical description available :("
+              }
+            </p>
+          </article>
+        </section>
+      }
       <section className="mt-10 text-center">
         <Button
           onClick={() => window.open(project.link, '_blank')}

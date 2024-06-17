@@ -6,7 +6,7 @@ export interface IProject {
   description: () => React.JSX.Element;
   techs: Array<React.JSX.Element>;
   history: Array<string>;
-  technicalDescription: () => React.JSX.Element;
+  technicalDescription?: () => React.JSX.Element;
 }
 
 export interface IShortProject extends Omit<IProject, 'history' | 'technicalDescription' | 'images' | 'description'> {

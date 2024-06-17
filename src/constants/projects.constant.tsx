@@ -1,5 +1,5 @@
 import { IProjectTemplate } from "@/components/Project/interface/ProjectTemplate.interface";
-import { faDigitalOcean, faDocker, faEnvira, faGithub, faNodeJs, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
+import { faDigitalOcean, faDocker, faEnvira, faGithub, faGitlab, faGoogle, faNodeJs, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const PROJECTS = [
@@ -65,30 +65,75 @@ export const PROJECTS = [
     ),
   } as IProjectTemplate,
   {
-    title: 'Ola',
+    title: 'Drata',
     description: () => (
-      <span>hola soy un componente de la descripción de Ola</span>
+      <span>Enterprise focused in creation of automated tools to handle audit based on some specific frameworks like <strong>SOC 2</strong> and <strong>ISO 27001</strong>.</span>
     ),
     techs: [
-      <FontAwesomeIcon icon={faReact} />
+      <FontAwesomeIcon icon={faReact} size="4x"/>,
+      <FontAwesomeIcon icon={faNodeJs} size="4x"/>,
+      <FontAwesomeIcon icon={faDocker} size="4x"/>,
+      <FontAwesomeIcon icon={faGithub} size="4x"/>,
     ],
     images: [{
-      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf8oXL5shgiDpj8G8lScZ5KCQuw6iJXDFMF64wod6b_g&s',
+      src: '/static/drata/1.png',
       alt: ''
     }],
-    link: "project/ola",
+    link: 'https://drata.com/',
     short: {
-      title: 'Ola',
-      description: 'Social media to chat with others',
+      title: 'Drata - Corporate project',
+      description: 'Environment developed to build automated complicance processes',
       techs: [
-        <FontAwesomeIcon icon={faReact} />
+        <em><strong>React</strong></em>,
+        <em><strong>Nest Js</strong></em>,
+        <em><strong>Docker</strong></em>,
       ],
     },
-    history: [],
     technicalDescription: () => (
-      <div>Empty technical description</div>
+      <span>
+        Worked as a FullStack developer fixing and implementing new features in <strong>React</strong> and <strong>NestJs</strong>. Helped a lot developing new data transmition design patters to improve performance and organization.
+        As this is a Company project I can not say too much about it, but for sure this was a so challenging project where a ton of knowledge is gotten.
+      </span>
     ),
   } as IProjectTemplate,
+  {
+    title: 'Neumomed',
+    description: () => (
+      <span>
+        This is a administrative project to handle pattients and respiratory/sleeping especialists. 
+        This project look for to make easier traitments toward patients handling appointments, payments and communication.
+      </span>
+    ),
+    techs: [
+      <FontAwesomeIcon icon={faVuejs} size="4x"/>,
+      <FontAwesomeIcon icon={faNodeJs} size="4x"/>,
+      <FontAwesomeIcon icon={faDocker} size="4x"/>,
+      <FontAwesomeIcon icon={faGoogle} size="4x"/>,
+      <FontAwesomeIcon icon={faGitlab} size="4x"/>,
+    ],
+    images: [{
+      src: '/static/neumomed/1.png',
+      alt: ''
+    }],
+    link: 'https://neumomed.com/',
+    short: {
+      title: 'Neumomed - Corporate project',
+      description: 'Especialized medical center to trait sleeping and respiratory disorders',
+      techs: [
+        <em><strong>Vue</strong></em>,
+        <em><strong>Nest Js</strong></em>,
+        <em><strong>Docker</strong></em>,
+        <em><strong>GCP</strong></em>,
+        <em><strong>Gitlab</strong></em>,
+      ],
+    },
+    technicalDescription: () => (
+      <span>
+        Worked mostly as a <strong>Backend Dev</strong> developed and fixed a ton of services and microservices which were created in <strong>NestJs</strong>.
+        As This is a company project I can not talk about it, but with 2+ years of experience with <strong>Vue</strong> I gain a lot of experience and went deeper into my career path.
+      </span>
+    ),
+  } as IProjectTemplate
 ]
 
 export const EMPTY_PROJECT_TEMPLATE = {
