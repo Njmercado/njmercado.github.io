@@ -39,7 +39,7 @@ export default function Button(props: ButtonDTO) {
     <button
       onClick={action}
       className={
-        'm-0 bg-gray-500 text-white ml-2 hover:bg-gray-700 transition-colors rounded-md p-0.5 ' + 
+        'm-0 bg-gray-500 text-white hover:bg-gray-700 transition-colors rounded-md p-0.5 ' + 
         (props.className ?? '')
       }
     >

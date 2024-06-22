@@ -5,6 +5,7 @@ import {
   Header,
   Footer
 } from '@/components'
+import StoreProvider from '@/lib/store/StoreProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,27 +20,29 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="font-mono text-xl">
-        <div className="grid grid-rows-10 h-screen">
-          <div className="grid grid-cols-10 row-span-9">
-            <Header className="col-span-2"></Header>
-            <main
-              id="informationContainer"
-              className="
+    <StoreProvider>
+      <html lang="en">
+        <body className="font-mono text-xl">
+          <div className="grid grid-rows-10 h-screen">
+            <div className="grid grid-cols-10 row-span-9">
+              <Header className="col-span-2"></Header>
+              <main
+                id="informationContainer"
+                className="
                 col-span-8 bg-gray-100 flex flex-col justify-center items-center
                 xs:*:w-11/12 sm:*:w-11/12 md:*:w-10/12 lg:*:w-9/12 xl:*:w-8/12
                 overflow-auto
               "
-            >
-              <div className="overflow-auto h-auto py-10 px-4">
-                {children}
-              </div>
-            </main>
+              >
+                <div className="overflow-auto h-auto py-10 px-4">
+                  {children}
+                </div>
+              </main>
+            </div>
+            <Footer className="row-span-1"></Footer>
           </div>
-          <Footer className="row-span-1"></Footer>
-        </div>
-      </body>
-    </html>
+        </body>
+      </html>
+    </StoreProvider>
   )
 }

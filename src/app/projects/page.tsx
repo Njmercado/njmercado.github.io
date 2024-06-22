@@ -3,12 +3,19 @@
 import ProjectList from '@/components/ProjectList/ProjectList';
 import { Title, TitleSize } from '@/components/Title/Title';
 import { PROJECTS } from '@/constants/projects.constant';
+import { setComponent } from '@/lib/store/features/footer/footerSlice';
+import { useAppDispatch } from '@/lib/store/hooks';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect } from 'react';
 
 export default function Project() {
+
+  const dispatch = useAppDispatch()
+  useEffect(() => { dispatch(setComponent('cv_button')) }, [])
+
   return (
-    <div>
+    <article>
       <section>
         <Title size={TitleSize.BIG} value={
           <p>
@@ -24,10 +31,10 @@ export default function Project() {
         </p>
       </section>
 
-      <article className="w-full mt-10">
+      <section className="w-full mt-10">
         <Title size={TitleSize.NORMAL} value='Top Projects:'></Title>
         <ProjectList projects={PROJECTS}></ProjectList>
-      </article>
-    </div>
+      </section>
+    </article>
   )
 }
