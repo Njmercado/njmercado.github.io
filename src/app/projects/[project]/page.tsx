@@ -1,5 +1,3 @@
-'use client';
-
 import { useParams, useRouter } from "next/navigation"
 import { EMPTY_PROJECT_TEMPLATE, PROJECTS } from "@/constants/projects.constant";
 import { Title, TitleSize } from "@/components";
