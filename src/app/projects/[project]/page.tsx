@@ -13,6 +13,11 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { useAppDispatch } from "@/lib/store/hooks";
 import { setComponent } from "@/lib/store/features/footer/footerSlice";
 
+export function generateStaticParams() {
+  const pages = ['kribi', 'drata', 'neumomed'];
+  return pages.map((page) => ({ name: page }));
+}
+
 export default function ProjectView() {
 
   const dispatch = useAppDispatch()
