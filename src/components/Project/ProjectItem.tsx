@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { IShortProject } from "./interface/Project.interface";
 
 export default function ProjectItem({
@@ -9,7 +10,7 @@ export default function ProjectItem({
   return (
     <article className="grid grid-cols-10 w-full hover:bg-gray-200 cursor-pointer transition-colors py-1">
       <div className="flex justify-center items-center col-start-1 col-span-2">
-        <img
+        <Image
           src={image.src}
           alt={image.alt}
           className="object-fill"

@@ -18,7 +18,7 @@ export default function Home() {
     <article>
       <section>
         <p>
-          Hi, Nino here. I'm <strong>Computer Engineer</strong>, <strong>Frontend</strong> and <strong>Backend Dev</strong>.
+          Hi, Nino here. I am <strong>Computer Engineer</strong>, <strong>Frontend</strong> and <strong>Backend Dev</strong>.
           In simple words: Artist by hobbie, Designer by heart and a Developer by passion.
           I like simple and functional things without the necessity of weird solutions.
           <br />

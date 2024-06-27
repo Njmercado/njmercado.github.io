@@ -51,7 +51,7 @@ export default function AboutMe() {
           There I learned a lot about <em>Web Development</em> and introduced myself into <em>FullStack</em> enviroment.
         </p>
         <p className="mt-5">
-          After that I've been part of multiple massive web projects with different technologies where a learned and also gave all my potential applying <strong>SOLID</strong>, <strong>Design Patters</strong> and <strong>SCRUM</strong> principles.
+          After that I have been part of multiple massive web projects with different technologies where a learned and also gave all my potential applying <strong>SOLID</strong>, <strong>Design Patters</strong> and <strong>SCRUM</strong> principles.
         </p>
         <p className="mt-5">
           Most of my <strong>Soft Skills</strong> are related with <em>Communication</em>, <em>Team work</em>, <em>Leadership</em> and <em>Self-study</em>.

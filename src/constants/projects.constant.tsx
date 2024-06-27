@@ -13,12 +13,12 @@ export const PROJECTS = [
       </span>
     ),
     techs: [
-      <FontAwesomeIcon icon={faVuejs} size="4x" />,
-      <FontAwesomeIcon icon={faEnvira} size="4x" />,
-      <FontAwesomeIcon icon={faNodeJs} size="4x" />,
-      <FontAwesomeIcon icon={faDigitalOcean} size="4x" />,
-      <FontAwesomeIcon icon={faGithub} size="4x" />,
-      <FontAwesomeIcon icon={faDocker} size="4x" />,
+      <FontAwesomeIcon icon={faVuejs} size="4x" key={1} />,
+      <FontAwesomeIcon icon={faEnvira} size="4x" key={2} />,
+      <FontAwesomeIcon icon={faNodeJs} size="4x" key={3} />,
+      <FontAwesomeIcon icon={faDigitalOcean} size="4x" key={4} />,
+      <FontAwesomeIcon icon={faGithub} size="4x" key={5} />,
+      <FontAwesomeIcon icon={faDocker} size="4x" key={6} />,
     ],
     images: [
       {
@@ -43,12 +43,12 @@ export const PROJECTS = [
       title: 'Kribi',
       description: 'Dictionary of Colombian Palenque indigenous language',
       techs: [
-        <em><strong>Vue</strong></em>,
-        <em><strong>Vuetify</strong></em>,
-        <em><strong>Nodejs</strong></em>,
-        <em><strong>Digital Ocean</strong></em>,
-        <em><strong>Github</strong></em>,
-        <em><strong>Docker</strong></em>,
+        <em key={1}><strong>Vue</strong></em>,
+        <em key={2}><strong>Vuetify</strong></em>,
+        <em key={3}><strong>Nodejs</strong></em>,
+        <em key={4}><strong>Digital Ocean</strong></em>,
+        <em key={5}><strong>Github</strong></em>,
+        <em key={6}><strong>Docker</strong></em>,
       ],
     },
     history: [],
@@ -70,10 +70,10 @@ export const PROJECTS = [
       <span>Enterprise focused in creation of automated tools to handle audit based on some specific frameworks like <strong>SOC 2</strong> and <strong>ISO 27001</strong>.</span>
     ),
     techs: [
-      <FontAwesomeIcon icon={faReact} size="4x"/>,
-      <FontAwesomeIcon icon={faNodeJs} size="4x"/>,
-      <FontAwesomeIcon icon={faDocker} size="4x"/>,
-      <FontAwesomeIcon icon={faGithub} size="4x"/>,
+      <FontAwesomeIcon icon={faReact} size="4x" key={1}/>,
+      <FontAwesomeIcon icon={faNodeJs} size="4x" key={2}/>,
+      <FontAwesomeIcon icon={faDocker} size="4x" key={3}/>,
+      <FontAwesomeIcon icon={faGithub} size="4x" key={4}/>,
     ],
     images: [{
       src: '/static/drata/1.png',
@@ -84,9 +84,9 @@ export const PROJECTS = [
       title: 'Drata - Corporate project',
       description: 'Environment developed to build automated complicance processes',
       techs: [
-        <em><strong>React</strong></em>,
-        <em><strong>Nest Js</strong></em>,
-        <em><strong>Docker</strong></em>,
+        <em key={1}><strong>React</strong></em>,
+        <em key={2}><strong>Nest Js</strong></em>,
+        <em key={3}><strong>Docker</strong></em>,
       ],
     },
     technicalDescription: () => (
@@ -105,11 +105,11 @@ export const PROJECTS = [
       </span>
     ),
     techs: [
-      <FontAwesomeIcon icon={faVuejs} size="4x"/>,
-      <FontAwesomeIcon icon={faNodeJs} size="4x"/>,
-      <FontAwesomeIcon icon={faDocker} size="4x"/>,
-      <FontAwesomeIcon icon={faGoogle} size="4x"/>,
-      <FontAwesomeIcon icon={faGitlab} size="4x"/>,
+      <FontAwesomeIcon icon={faVuejs} size="4x" key={1}/>,
+      <FontAwesomeIcon icon={faNodeJs} size="4x" key={2}/>,
+      <FontAwesomeIcon icon={faDocker} size="4x" key={3}/>,
+      <FontAwesomeIcon icon={faGoogle} size="4x" key={4}/>,
+      <FontAwesomeIcon icon={faGitlab} size="4x" key={5}/>,
     ],
     images: [{
       src: '/static/neumomed/1.png',
@@ -120,11 +120,11 @@ export const PROJECTS = [
       title: 'Neumomed - Corporate project',
       description: 'Especialized medical center to trait sleeping and respiratory disorders',
       techs: [
-        <em><strong>Vue</strong></em>,
-        <em><strong>Nest Js</strong></em>,
-        <em><strong>Docker</strong></em>,
-        <em><strong>GCP</strong></em>,
-        <em><strong>Gitlab</strong></em>,
+        <em key={1}><strong>Vue</strong></em>,
+        <em key={2}><strong>Nest Js</strong></em>,
+        <em key={3}><strong>Docker</strong></em>,
+        <em key={4}><strong>GCP</strong></em>,
+        <em key={5}><strong>Gitlab</strong></em>,
       ],
     },
     technicalDescription: () => (
