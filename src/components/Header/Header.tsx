@@ -2,21 +2,34 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { URL } from '../../constants/urls.constant';
+import { URL } from '@/constants/urls.constant';
+import { IGeneral } from '@/interfaces/general.interface';
+import { PAGES } from '@/constants/general.constant';
 
-export default function Header(props: any) {
+export interface HeaderProps extends IGeneral {
+  onClick?: () => void;
+}
+
+export default function Header({
+  className,
+  onClick,
+}: HeaderProps) {
   const router = useRouter()
-  const PAGES = ['Home', 'Projects', 'About', 'Blog', 'Contact']
+
+  const goTo = (page: string) => router.push(URL[page.toUpperCase()].MAIN)
 
   return (
-    <nav className={"text-4xl bg-gray-500 flex flex-col justify-center p-4 pl-8 " + props.className}>
+    <nav className={"text-4xl bg-gray-500 flex flex-col justify-center p-4 pl-8 " + className}>
       <ul style={{ marginLeft: "20%" }} className='gap-2 grid'>
         {
           PAGES.map((page: string, index: any) => (
             <li key={index}>
               <a
-                className="cursor-pointer"
-                onClick={() => router.push(URL[page.toUpperCase()].MAIN)}
+                className="cursor-pointer" 
+                onClick={() => {
+                  onClick?.();
+                  goTo(page)}
+                }
               >
                 {page}
               </a>

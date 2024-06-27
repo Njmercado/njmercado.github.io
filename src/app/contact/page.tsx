@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <article className="flex flex-col justify-center items-center">
-      <section className="flex flex-row items-center">
+      <section className="flex xs:flex-col sm:flex-col md:flex-row items-center">
         <Image src="/static/atlantico.png" width={300} height={300} alt="Image of Colombian Atlantic's department."/>
         <p> <em>Barranquilla - Colombia</em> </p>
       </section>

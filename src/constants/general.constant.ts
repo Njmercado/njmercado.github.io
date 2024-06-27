@@ -6,3 +6,4 @@ export const CV_LINKS = {
   LINKEDIN: 'https://www.linkedin.com/in/nino-mercado-48b513147/',
   GITHUB: 'https://github.com/Njmercado'
 }
+export const PAGES = ['Home', 'Projects', 'About', 'Blog', 'Contact']

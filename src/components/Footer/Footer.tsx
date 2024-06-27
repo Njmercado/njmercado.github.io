@@ -1,15 +1,28 @@
 'use client'
 
-import { faBackwardStep, faForwardStep, faPause, faStop } from '@fortawesome/free-solid-svg-icons';
+import { faBackwardStep, faBars, faClose, faForwardStep, faPause, faStop } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CvButton } from '@/components';
 import { useAppSelector } from '@/lib/store/hooks';
 
-export default function Footer(props: any) {
+export interface FooterProps {
+  className: string;
+  onOpenCloseMenu: (open: boolean) => void;
+  openCloseMenu : boolean;
+}
+
+export default function Footer({
+  className,
+  onOpenCloseMenu,
+  openCloseMenu,
+}: FooterProps) {
 
   const [paused, setPaused] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
   const footerState = useAppSelector(state => state.footer.value);
+
+  useEffect(() => setOpenModal(openCloseMenu), [openCloseMenu])
 
   const getChosenComponent = (component: string) => {
     let template;
@@ -31,9 +44,20 @@ export default function Footer(props: any) {
   }
 
   return (
-    <footer className={"bg-gray-300 grid grid-cols-10 " + props.className}>
-      <article className="col-span-2 flex flex-row items-center">
-        <p><span>menu</span></p>
+    <footer className={"bg-gray-300 grid grid-cols-10 " + className}>
+      <article className="ml-5 col-span-2 flex flex-row items-center">
+        <p>
+          <FontAwesomeIcon
+            onClick={() => {
+                onOpenCloseMenu(!openModal);
+                setOpenModal(!openModal)
+              }
+            }
+            className="cursor-pointer"
+            icon={openModal? faClose: faBars}
+            size='xl'
+          />
+        </p>
       </article>
       <article className="col-span-6 flex flex-row justify-center items-center h-full">
         <p className='flex gap-4'>
