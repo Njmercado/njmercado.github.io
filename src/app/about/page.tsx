@@ -5,7 +5,7 @@ import { TECHS_I_KNOW } from "@/constants/general.constant";
 import { URL } from "@/constants/urls.constant";
 import { setComponent } from "@/lib/store/features/footer/footerSlice";
 import { useAppDispatch } from "@/lib/store/hooks";
-import { faHand } from "@fortawesome/free-regular-svg-icons";
+import { faHandSparkles } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
@@ -25,7 +25,7 @@ export default function AboutMe() {
     <article>
       <section>
         <p>
-          Hi again visitor <span><FontAwesomeIcon icon={faHand} size='lg'></FontAwesomeIcon></span>
+          Hi again visitor <span><FontAwesomeIcon icon={faHandSparkles} size='lg'></FontAwesomeIcon></span>
         </p>
       </section>
       <section className="mt-10">

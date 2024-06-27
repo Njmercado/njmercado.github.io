@@ -1,7 +1,7 @@
 'use client';
 
 import ProjectList from '@/components/ProjectList/ProjectList';
-import { Title, TitleSize } from '@/components/Title/Title';
+import { Title, TitleSize } from '@/components';
 import { PROJECTS } from '@/constants/projects.constant';
 import { setComponent } from '@/lib/store/features/footer/footerSlice';
 import { useAppDispatch } from '@/lib/store/hooks';

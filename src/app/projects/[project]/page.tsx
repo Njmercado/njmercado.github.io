@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation"
 import { EMPTY_PROJECT_TEMPLATE, PROJECTS } from "@/constants/projects.constant";
-import { Title, TitleSize } from "@/components/Title/Title";
+import { Title, TitleSize } from "@/components";
 import React, { useEffect, useState } from "react";
 import { URL } from "@/constants/urls.constant";
 import { IProjectTemplate } from "@/components/Project/interface/ProjectTemplate.interface";

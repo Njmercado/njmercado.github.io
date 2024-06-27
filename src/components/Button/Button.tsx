@@ -19,7 +19,7 @@ export class ButtonDTO implements IButton {
   onClick?: Function;
   type?: Action = Action.FUNC;
   className?: string | undefined;
-  value: ReactNode = ""; 
+  value: ReactNode = "";
 }
 
 export default function Button(props: ButtonDTO) {
@@ -39,7 +39,7 @@ export default function Button(props: ButtonDTO) {
     <button
       onClick={action}
       className={
-        'm-0 bg-gray-500 text-white hover:bg-gray-700 transition-colors rounded-md p-0.5 ' + 
+        'm-0 bg-gray-400 text-white hover:bg-gray-500 transition-all rounded-md p-0.5 hover:shadow-md hover:shadow-gray-600 hover:-translate-y-1 ' +
         (props.className ?? '')
       }
     >

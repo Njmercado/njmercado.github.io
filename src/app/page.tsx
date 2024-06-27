@@ -43,7 +43,7 @@ export default function Home() {
         </p>
         <p className="mt-5 flex flex-row justify-center">
           <iframe
-            className="xs:w-full sm:w-full md:w-1/2 lg:w-2/3 xl:w-3/5"
+            className="xs:w-full sm:w-full md:w-3/4 lg:w-11/12 xl:w-11/12"
             src="https://docs.google.com/forms/d/e/1FAIpQLSfpcVHD80y0APQrze4GxIPrGWu3D7ZS8CmQk4hsTmTMnCZCuQ/viewform?embedded=true"
             height={1100}
           >

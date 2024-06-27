@@ -11,10 +11,10 @@ export interface ITitle {
   value: string | React.JSX.Element;
 }
 
-export const Title = ({
+export default function Title({
   size,
   value
-}: ITitle) => {
+}: ITitle) {
 
   const getHTagGivingSize = (size: TitleSize) => {
     switch (size) {
