@@ -14,7 +14,8 @@ export default function ProjectItem({
           src={image.src}
           alt={image.alt}
           className="object-fill"
-          style={{ width: '50px', height: '50px' }}
+          width={80}
+          height={80}
         />
       </div>
       <article className="col-start-3 col-span-8">

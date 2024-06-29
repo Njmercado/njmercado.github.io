@@ -8,3 +8,7 @@ export interface IProjectTemplate extends IProject {
     techs: Array<React.JSX.Element>
   }
 }
+
+export interface IProjectTemplateWithLink extends IProject {
+  link: string
+}

@@ -9,7 +9,7 @@ import { faGear } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect } from 'react';
 
-export default function Project() {
+export default function Projects() {
 
   const dispatch = useAppDispatch()
   useEffect(() => { dispatch(setComponent('cv_button')) }, [])
