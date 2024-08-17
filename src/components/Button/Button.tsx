@@ -12,6 +12,8 @@ export interface IButton extends IGeneral {
   onClick?: Function;
   type?: Action;
   external?: boolean;
+  submit?: boolean;
+  disabled?: boolean
 }
 
 export class ButtonDTO implements IButton {
@@ -20,6 +22,8 @@ export class ButtonDTO implements IButton {
   type?: Action = Action.FUNC;
   className?: string | undefined;
   value: ReactNode = "";
+  submit?: boolean | undefined = false;
+  disabled?: boolean = false
 }
 
 export default function Button(props: ButtonDTO) {
@@ -37,6 +41,8 @@ export default function Button(props: ButtonDTO) {
 
   return (
     <button
+      disabled={props.disabled}
+      type={props.submit ? 'submit' : 'button'}
       onClick={action}
       className={
         'm-0 bg-gray-400 text-white hover:bg-gray-500 transition-all rounded-md p-0.5 hover:shadow-md hover:shadow-gray-600 hover:-translate-y-1 ' +

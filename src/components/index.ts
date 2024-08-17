@@ -6,6 +6,8 @@ import Body from './Body/Body';
 import Title, { TitleSize } from './Title/Title';
 import ProjectView from "./ProjectView/ProjectView";
 import ProjectProvider from "./ProjectProvider/ProjectProvider";
+import ContactForm from "./ContactForm";
+import Input from "./Input";
 
 /* Components */
 export {
@@ -17,6 +19,8 @@ export {
   Title,
   ProjectView,
   ProjectProvider,
+  ContactForm,
+  Input
 }
 
 /* Interfaces */

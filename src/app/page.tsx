@@ -8,6 +8,7 @@ import { setComponent } from '@/lib/store/features/footer/footerSlice';
 import './page.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPointDown } from '@fortawesome/free-solid-svg-icons';
+import { ContactForm } from '@/components';
 
 export default function Home() {
 
@@ -38,18 +39,12 @@ export default function Home() {
       <section>
         <h2 className="text-2xl font-bold">Contact</h2>
         <p className="mt-5">
-          I know you want get more information and there is no problem, you just need to fill this form here 
+          I know you want more information and I would glad to help you, just fill this tiny tiny form here 
           <FontAwesomeIcon className='ml-2' icon={faHandPointDown} shake={true}/>
         </p>
-        <p className="mt-5 flex flex-row justify-center">
-          <iframe
-            className="xs:w-full sm:w-full md:w-3/4 lg:w-11/12 xl:w-11/12"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfpcVHD80y0APQrze4GxIPrGWu3D7ZS8CmQk4hsTmTMnCZCuQ/viewform?embedded=true"
-            height={1100}
-          >
-            Cargando…
-          </iframe>
-        </p>
+        <div className='mt-5'>
+          <ContactForm/>
+        </div>
       </section>
     </article>
   )
