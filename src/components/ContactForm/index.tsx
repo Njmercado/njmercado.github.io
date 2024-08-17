@@ -10,7 +10,6 @@ export default function ContactForm() {
 
     if (response) {
       alert('Email sent successfully')
-      // TODO: clear form
     }
   }
 
