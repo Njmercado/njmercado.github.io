@@ -8,7 +8,7 @@ export const PROJECTS = [
     title: 'Kribi',
     description: () => (
       <span>
-        It is a <strong>Dictionary</strong> which is the result of various research projects for <strong>Palenque's</strong> language.
+        It is a <strong>Dictionary</strong> which is the result of various research projects for <strong>Palenques</strong> language.
         Kribí seeks to maintain and democratize the Palenque language to anyone who wishes
         to obtain knowledge from a wide range of articles, games, phrases, words and letters.
       </span>
