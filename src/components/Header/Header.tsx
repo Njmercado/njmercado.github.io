@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { URL } from '@/constants/urls.constant';
 import { IGeneral } from '@/interfaces/general.interface';
@@ -14,8 +14,10 @@ export default function Header({
   className,
   onClick,
 }: HeaderProps) {
-  const [pathname, setPathname] = useState(window.location.pathname)
+  const [pathname, setPathname] = useState<string>('')
   const router = useRouter()
+
+  useEffect(() => { setPathname(window.location.pathname) }, [])
 
   const goTo = (page: string) => router.push(URL[page.toUpperCase()].MAIN)
 
