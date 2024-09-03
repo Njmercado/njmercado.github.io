@@ -1,5 +1,6 @@
 import { IProjectTemplate } from "@/components/Project/interface/ProjectTemplate.interface";
-import { faDigitalOcean, faDocker, faEnvira, faGithub, faGitlab, faGoogle, faNodeJs, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
+import { faAws, faDigitalOcean, faDocker, faEnvira, faGithub, faGitlab, faGoogle, faNodeJs, faPython, faReact, faVuejs } from "@fortawesome/free-brands-svg-icons";
+import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const PROJECTS = [
@@ -7,9 +8,9 @@ export const PROJECTS = [
     title: 'Kribi',
     description: () => (
       <span>
-        Es un <strong>Diccionario</strong> el cual es el resultado de diversos proyectos de investigación sobre la lengua <strong>Palenquera</strong>.
-        Kribí busca mantener y democratizar la lengua Palenque a todo aquel que desee
-        obtener conocimiento desde una amplia gama de articulos, juegos, frases, palabras y letras.
+        It is a <strong>Dictionary</strong> which is the result of various research projects for <strong>Palenque's</strong> language.
+        Kribí seeks to maintain and democratize the Palenque language to anyone who wishes
+        to obtain knowledge from a wide range of articles, games, phrases, words and letters.
       </span>
     ),
     techs: [
@@ -38,7 +39,8 @@ export const PROJECTS = [
         alt: ''
       }
     ],
-    link: "http://www.kribi.com.co",
+    // link: "http://www.kribi.com.co",
+    link: "https://kribiapp.netlify.app",
     short: {
       title: 'Kribi',
       description: 'Dictionary of Colombian Palenque indigenous language',
@@ -54,16 +56,52 @@ export const PROJECTS = [
     history: [],
     technicalDescription: () => (
       <span>
-        Este proyecto se desarrolló en<strong>Vuejs</strong>como Framework de Frontend y se complementó con<strong>Vuetify</strong>
-        como ayuda para el desarrollo de componentes y uso de de su librería<strong>CSS</strong>.
+        This project was developed in <strong>Vuejs</strong> as Frontend Framework with the help of <strong>Vuetify</strong>
+        to develop components and use of its CSS library.
         <br />
-        Para el Backend se optó por usar<strong>Express</strong>con<strong>MongoDB</strong>para el manejo de la lógica de negocio.
+        For the Backend was used <strong>Express</strong> with <strong>MongoDB</strong> to handle the business logic.
         <br />
-        Y para el manejo del desarrollo constante se usó <strong>Digital Ocean</strong>, <strong>Docker</strong> y <strong>Github Actions</strong>
-        para servir, manejar los proyectos, y dependencias, y por ultimo versionar los cambios.
+        And for the constant development was used <strong>Digital Ocean</strong>, <strong>Docker</strong> and <strong>Github Actions</strong>
+        to serve, manage the projects and dependencies, and version the changes.
       </span>
     ),
   } as IProjectTemplate,
+  {
+    title: 'Nuvu',
+    description: () => (
+      <span>Enterprise who design and distribute products developed with AI as their base. This enterrpise works along with a bunch of large companies developing fast and efficient solutions.</span>
+    ),
+    techs: [
+      <FontAwesomeIcon icon={faReact} size="4x" key={1}/>,
+      <FontAwesomeIcon icon={faDocker} size="4x" key={3}/>,
+      <FontAwesomeIcon icon={faAws} size="4x" key={4}/>,
+      <FontAwesomeIcon icon={faPython} size="4x" key={4}/>,
+      <FontAwesomeIcon icon={faRobot} size="4x" key={4}/>,
+    ],
+    images: [
+      {
+        src: '',
+        alt: ''
+      },
+    ],
+    link: 'https://nuvu.com.co/',
+    short: {
+      title: 'Nuvu - Corporate project',
+      description: 'Enterprise focused in AI and Machine Learning',
+      techs: [
+        <em key={1}><strong>React</strong></em>,
+        <em key={3}><strong>Docker</strong></em>,
+        <em key={4}><strong>AWS</strong></em>,
+        <em key={5}><strong>Python</strong></em>,
+      ],
+    },
+    technicalDescription: () => (
+      <span>
+        Worked as a Senior FullStack Developer fixing and implementing new projects and features in <strong>React</strong>. Helped a lot developing new projects from scratch till production environment, catching user requests and convert client ideas into code.
+        As this is a Company project I can not say too much about it, but for sure this was a so challenging project where a ton of knowledge was gotten.
+      </span>
+    )
+  },
   {
     title: 'Drata',
     description: () => (
