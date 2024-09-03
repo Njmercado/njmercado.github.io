@@ -97,7 +97,7 @@ export const PROJECTS = [
     },
     technicalDescription: () => (
       <span>
-        Worked as a FullStack developer fixing and implementing new features in <strong>React</strong> and <strong>NodeJs</strong>. Helped a lot developing new data transmition design patters to improve performance and organization.
+        Worked as a Senior FullStack Developer fixing and implementing new projects and features in <strong>React</strong>. Helped a lot developing new projects from scratch till production environment, catching user requests and convert client ideas into code.
         As this is a Company project I can not say too much about it, but for sure this was a so challenging project where a ton of knowledge was gotten.
       </span>
     )
