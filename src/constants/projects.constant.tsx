@@ -14,12 +14,10 @@ export const PROJECTS = [
       </span>
     ),
     techs: [
-      <FontAwesomeIcon icon={faVuejs} size="4x" key={1} />,
-      <FontAwesomeIcon icon={faEnvira} size="4x" key={2} />,
-      <FontAwesomeIcon icon={faNodeJs} size="4x" key={3} />,
-      <FontAwesomeIcon icon={faDigitalOcean} size="4x" key={4} />,
-      <FontAwesomeIcon icon={faGithub} size="4x" key={5} />,
-      <FontAwesomeIcon icon={faDocker} size="4x" key={6} />,
+      <FontAwesomeIcon icon={faReact} size="4x" key={1} />,
+      <FontAwesomeIcon icon={faAws} size="4x" key={2} />,
+      <FontAwesomeIcon icon={faGithub} size="4x" key={3} />,
+      <FontAwesomeIcon icon={faEnvira} size="4x" key={4} />,
     ],
     images: [
       {
@@ -39,29 +37,42 @@ export const PROJECTS = [
         alt: ''
       }
     ],
-    // link: "http://www.kribi.com.co",
-    link: "https://kribiapp.netlify.app",
+    link: "http://www.kribi.com.co",
     short: {
       title: 'Kribi',
       description: 'Dictionary of Colombian Palenque indigenous language',
       techs: [
-        <em key={1}><strong>Vue</strong></em>,
-        <em key={2}><strong>Vuetify</strong></em>,
-        <em key={3}><strong>Nodejs</strong></em>,
-        <em key={4}><strong>Digital Ocean</strong></em>,
+        <em key={1}><strong>React</strong></em>,
+        <em key={2}><strong>NextJs</strong></em>,
+        <em key={3}><strong>AWS</strong></em>,
+        <em key={4}><strong>Lambdas</strong></em>,
         <em key={5}><strong>Github</strong></em>,
-        <em key={6}><strong>Docker</strong></em>,
+        <em key={6}><strong>MongoDB</strong></em>,
       ],
     },
-    history: [],
+    history: [
+      <article>
+        <section>
+          <p>
+            This project was developed first with <strong>VueJS</strong> and <strong>Vuetify</strong> as Frontend Framework and CSS library.
+          </p>
+          <p>
+            The Backend was developed with <strong>Express</strong> and <strong>MongoDB</strong> to handle the business logic.
+          </p>
+          <p>
+            The project was deployed in <strong>Digital Ocean</strong> and <strong>Docker</strong> was used to manage the project and its dependencies.
+          </p>
+        </section>
+      </article>,
+    ],
     technicalDescription: () => (
       <span>
-        This project was developed in <strong>Vuejs</strong> as Frontend Framework with the help of <strong>Vuetify</strong>
-        to develop components and use of its CSS library.
+        This project was developed in <strong>ReactJs</strong> as Frontend Framework with the help of <strong>NextJS</strong>
+        for structure and pre configuration.
         <br />
-        For the Backend was used <strong>Express</strong> with <strong>MongoDB</strong> to handle the business logic.
+        For the Backend was used <strong>AWS</strong> services like <strong>Lambda</strong> and <strong>Api Gateway</strong> to handle the business logic.
         <br />
-        And for the constant development was used <strong>Digital Ocean</strong>, <strong>Docker</strong> and <strong>Github Actions</strong>
+        And for the constant development was used <strong>Github Actions</strong> and <strong>Netlify</strong>
         to serve, manage the projects and dependencies, and version the changes.
       </span>
     ),
@@ -84,7 +95,7 @@ export const PROJECTS = [
         alt: ''
       },
     ],
-    link: 'https://nuvu.com.co/',
+    link: 'https://nuvu.cc/',
     short: {
       title: 'Nuvu - Corporate project',
       description: 'Enterprise focused in AI and Machine Learning',
