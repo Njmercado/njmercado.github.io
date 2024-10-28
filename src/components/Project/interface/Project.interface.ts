@@ -5,7 +5,7 @@ export interface IProject {
   title: string;
   description: () => React.JSX.Element;
   techs: Array<React.JSX.Element>;
-  history?: Array<string>;
+  history?: Array<React.JSX.Element>;
   technicalDescription?: () => React.JSX.Element;
 }
 

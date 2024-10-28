@@ -1,9 +1,11 @@
+'use client'
+
 import { Title, TitleSize } from "@/components";
-import React from "react";
+import React, { useState } from "react";
 import Button, { Action } from "@/components/Button/Button";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faSortDown } from "@fortawesome/free-solid-svg-icons";
 import { IProjectTemplateWithLink } from "../Project/interface/ProjectTemplate.interface";
 
 export default function ProjectView({
@@ -13,7 +15,11 @@ export default function ProjectView({
   techs,
   technicalDescription,
   link,
+  history
 }: IProjectTemplateWithLink) {
+
+  const [showHistory, setShowHistory] = useState(false)
+
   return (
     <article>
       <section className="-ml-2">
@@ -75,6 +81,30 @@ export default function ProjectView({
               technicalDescription?.() ?? "There is no technical description available :("
             }
           </p>
+        </section>
+      }
+      {
+        history && history.length > 0 &&
+        <section className="mt-10 rounded-md bg-gray-200">
+          <div className="flex flex-row justify-between rounded-md bg-gray-300 p-2">
+            <Title size={TitleSize.BIG} value="History" />
+            <div
+              className="cursor-pointer transition-all hover:bg-gray-600 rounded-full pb-2 px-3"
+              onClick={() => setShowHistory(!showHistory)}
+            >
+              <FontAwesomeIcon
+                icon={faSortDown}
+                fontSize={32}
+              />
+            </div>
+          </div>
+          <ul className={`text-sm px-6 py-2 transition-all ${showHistory? '': 'hidden'}`}>
+            {
+              history.map((history: React.JSX.Element, index: number) =>
+                <li className="list-disc" key={index}>{history}</li>
+              )
+            }
+          </ul>
         </section>
       }
       <section className="mt-10 text-center">
