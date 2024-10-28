@@ -54,6 +54,7 @@ export default function ProjectProvider({
       techs={project?.techs}
       technicalDescription={project?.technicalDescription}
       link={project?.link}
+      history={project?.history}
     />
   )
 }
