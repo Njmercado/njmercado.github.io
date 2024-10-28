@@ -51,7 +51,7 @@ export const PROJECTS = [
       ],
     },
     history: [
-      <article>
+      <article key={1}>
         <section>
           <p>
             This project was developed first with <strong>VueJS</strong> and <strong>Vuetify</strong> as Frontend Framework and CSS library.
